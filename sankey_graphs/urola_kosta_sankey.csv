@@ -1,0 +1,65 @@
+,name_origen,name_destino,viajes
+0,Aia AM_O,Aia AM_D,30214.321
+1,Aia AM_O,Azkoitia_D,825.505
+2,Aia AM_O,Azpeitia_D,2250.562
+3,Aia AM_O,Getaria_D,12178.22
+4,Aia AM_O,Orio_D,15806.519
+5,Aia AM_O,Zarautz_D,104157.16100000001
+6,Aia AM_O,Zestoa AM_D,3427.98
+7,Aia AM_O,Zumaia_D,5331.234
+8,Azkoitia_O,Aia AM_D,837.518
+9,Azkoitia_O,Azkoitia_D,296669.376
+10,Azkoitia_O,Azpeitia_D,138255.636
+11,Azkoitia_O,Getaria_D,1703.867
+12,Azkoitia_O,Orio_D,858.8009999999999
+13,Azkoitia_O,Zarautz_D,4840.994
+14,Azkoitia_O,Zestoa AM_D,14405.101999999999
+15,Azkoitia_O,Zumaia_D,6522.648999999999
+16,Azpeitia_O,Aia AM_D,2194.765
+17,Azpeitia_O,Azkoitia_D,137568.492
+18,Azpeitia_O,Azpeitia_D,258483.625
+19,Azpeitia_O,Getaria_D,4648.746
+20,Azpeitia_O,Orio_D,2125.164
+21,Azpeitia_O,Zarautz_D,10698.175
+22,Azpeitia_O,Zestoa AM_D,34792.061
+23,Azpeitia_O,Zumaia_D,12245.922
+24,Getaria_O,Aia AM_D,11806.323
+25,Getaria_O,Azkoitia_D,1806.69
+26,Getaria_O,Azpeitia_D,4494.559
+27,Getaria_O,Getaria_D,3581.216
+28,Getaria_O,Orio_D,21278.771
+29,Getaria_O,Zarautz_D,75583.486
+30,Getaria_O,Zestoa AM_D,9133.992
+31,Getaria_O,Zumaia_D,19790.311
+32,Orio_O,Aia AM_D,16432.267
+33,Orio_O,Azkoitia_D,815.9159999999999
+34,Orio_O,Azpeitia_D,2103.438
+35,Orio_O,Getaria_D,21786.687
+36,Orio_O,Orio_D,14224.561
+37,Orio_O,Zarautz_D,170196.275
+38,Orio_O,Zestoa AM_D,3668.492
+39,Orio_O,Zumaia_D,5983.556
+40,Zarautz_O,Aia AM_D,98486.467
+41,Zarautz_O,Azkoitia_D,4854.563
+42,Zarautz_O,Azpeitia_D,10825.33
+43,Zarautz_O,Getaria_D,76755.917
+44,Zarautz_O,Orio_D,165589.468
+45,Zarautz_O,Zarautz_D,694308.497
+46,Zarautz_O,Zestoa AM_D,18351.678
+47,Zarautz_O,Zumaia_D,35450.95
+48,Zestoa AM_O,Aia AM_D,3530.549
+49,Zestoa AM_O,Azkoitia_D,14467.168
+50,Zestoa AM_O,Azpeitia_D,34713.684
+51,Zestoa AM_O,Getaria_D,9403.951
+52,Zestoa AM_O,Orio_D,3486.808
+53,Zestoa AM_O,Zarautz_D,18281.524
+54,Zestoa AM_O,Zestoa AM_D,30511.389
+55,Zestoa AM_O,Zumaia_D,66742.693
+56,Zumaia_O,Aia AM_D,5129.283
+57,Zumaia_O,Azkoitia_D,6295.522
+58,Zumaia_O,Azpeitia_D,12429.641
+59,Zumaia_O,Getaria_D,19301.289
+60,Zumaia_O,Orio_D,5875.4800000000005
+61,Zumaia_O,Zarautz_D,35196.777
+62,Zumaia_O,Zestoa AM_D,66228.927
+63,Zumaia_O,Zumaia_D,190575.349

@@ -1,0 +1,53 @@
+/* Inside assets/style.css */
+.Select-control .Select-arrow-zone {
+    display: none !important;  /* Hides the dropdown arrow */
+}
+
+/* Cool Dropdown Styles */
+.cool-dropdown .Select-control {
+    border-radius: 25px !important;  /* Rounded corners */
+    background-color: rgba(173, 216, 230, 0.8) !important;  /* Light blue */
+    border: 2px solid #ADD8E6 !important;  /* Light blue border */
+    box-shadow: 0px 4px 8px rgba(173, 216, 230, 0.5);  /* Light shadow */
+    transition: all 0.3s ease;  /* Smooth transition */
+}
+
+/* Hover Effect for Control */
+.cool-dropdown .Select-control:hover {
+    background-color: rgba(173, 216, 230, 1);  /* Slightly darker on hover */
+    cursor: pointer;
+}
+
+/* Cool style for the dropdown list when open */
+.cool-dropdown .Select-menu-outer {
+    border-radius: 25px !important;  /* Rounded corners for the dropdown */
+    background-color: rgba(173, 216, 230, 0.9) !important;  /* Light blue background */
+    box-shadow: 0px 4px 8px rgba(173, 216, 230, 0.7);  /* Soft shadow */
+    max-height: 250px !important;  /* Limit the height */
+    overflow-y: auto !important;  /* Scrollable when too many items */
+}
+
+/* Hover Effect on Dropdown Options */
+.cool-dropdown .Select-option:hover {
+    background-color: rgba(173, 216, 230, 0.6) !important;  /* Light hover effect */
+    color: white !important;  /* White text on hover */
+    cursor: pointer;
+}
+
+/* Style for the selected option */
+.cool-dropdown .Select-option.is-selected {
+    background-color: #ADD8E6 !important;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+/* Custom arrow icon */
+.cool-dropdown .Select-arrow {
+    color: #ADD8E6 !important;  /* Blue arrow */
+    transition: transform 0.3s ease !important;  /* Smooth transform */
+}
+
+/* Arrow rotation when dropdown is open */
+.cool-dropdown .Select-arrow-zone.open .Select-arrow {
+    transform: rotate(180deg) !important;  /* Rotate arrow */
+}

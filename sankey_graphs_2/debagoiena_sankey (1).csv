@@ -1,0 +1,50 @@
+,name_origen,name_destino,viajes
+0,Aretxabaleta_O,Aretxabaleta_D,4109.627
+1,Aretxabaleta_O,Arrasate/Mondragón_D,20834.278
+2,Aretxabaleta_O,Bergara_D,4171.117
+3,Aretxabaleta_O,Eskoriatza AM_D,17185.659
+4,Aretxabaleta_O,Oñati_D,3042.423
+5,Aretxabaleta_O,Soraluze-Placencia de las Armas AM_D,7691.656
+6,Aretxabaleta_O,Urretxu AM_D,600.303
+7,Arrasate/Mondragón_O,Aretxabaleta_D,17411.648
+8,Arrasate/Mondragón_O,Arrasate/Mondragón_D,155221.995
+9,Arrasate/Mondragón_O,Bergara_D,28058.619
+10,Arrasate/Mondragón_O,Eskoriatza AM_D,11891.946
+11,Arrasate/Mondragón_O,Oñati_D,17667.037
+12,Arrasate/Mondragón_O,Soraluze-Placencia de las Armas AM_D,8259.104
+13,Arrasate/Mondragón_O,Urretxu AM_D,7017.557999999999
+14,Bergara_O,Aretxabaleta_D,6698.88
+15,Bergara_O,Arrasate/Mondragón_D,21246.346
+16,Bergara_O,Bergara_D,91851.85199999998
+17,Bergara_O,Eskoriatza AM_D,3892.9199999999996
+18,Bergara_O,Oñati_D,11714.416
+19,Bergara_O,Soraluze-Placencia de las Armas AM_D,29234.634
+20,Bergara_O,Urretxu AM_D,8677.357
+21,Eskoriatza AM_O,Aretxabaleta_D,23221.498
+22,Eskoriatza AM_O,Arrasate/Mondragón_D,11446.326000000001
+23,Eskoriatza AM_O,Bergara_D,1522.87
+24,Eskoriatza AM_O,Eskoriatza AM_D,16367.558
+25,Eskoriatza AM_O,Oñati_D,1896.878
+26,Eskoriatza AM_O,Soraluze-Placencia de las Armas AM_D,823.8
+27,Eskoriatza AM_O,Urretxu AM_D,6456.312
+28,Oñati_O,Aretxabaleta_D,1655.9470000000001
+29,Oñati_O,Arrasate/Mondragón_D,19097.467
+30,Oñati_O,Bergara_D,8290.492
+31,Oñati_O,Eskoriatza AM_D,6541.736
+32,Oñati_O,Oñati_D,82346.129
+33,Oñati_O,Soraluze-Placencia de las Armas AM_D,1758.9830000000002
+34,Oñati_O,Urretxu AM_D,3659.486
+35,Soraluze-Placencia de las Armas AM_O,Aretxabaleta_D,254.096
+36,Soraluze-Placencia de las Armas AM_O,Arrasate/Mondragón_D,1667.075
+37,Soraluze-Placencia de las Armas AM_O,Bergara_D,12864.284
+38,Soraluze-Placencia de las Armas AM_O,Eskoriatza AM_D,697.377
+39,Soraluze-Placencia de las Armas AM_O,Oñati_D,979.995
+40,Soraluze-Placencia de las Armas AM_O,Soraluze-Placencia de las Armas AM_D,10663.631
+41,Soraluze-Placencia de las Armas AM_O,Urretxu AM_D,4078.3450000000003
+42,Urretxu AM_O,Aretxabaleta_D,910.5160000000001
+43,Urretxu AM_O,Arrasate/Mondragón_D,5498.943
+44,Urretxu AM_O,Bergara_D,9864.456
+45,Urretxu AM_O,Eskoriatza AM_D,1189.51
+46,Urretxu AM_O,Oñati_D,1772.382
+47,Urretxu AM_O,Soraluze-Placencia de las Armas AM_D,1275.4360000000001
+48,Urretxu AM_O,Urretxu AM_D,8512.256000000001

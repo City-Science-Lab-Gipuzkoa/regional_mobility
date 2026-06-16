@@ -1,0 +1,65 @@
+,name_origen,name_destino,viajes
+0,Alegia AM_O,Alegia AM_D,2676.964
+1,Alegia AM_O,Anoeta AM_D,886.8599999999999
+2,Alegia AM_O,Berastegi AM_D,2598.018
+3,Alegia AM_O,Ibarra_D,1232.4679999999998
+4,Alegia AM_O,Legorreta AM_D,7638.112
+5,Alegia AM_O,Tolosa_D,6765.757
+6,Alegia AM_O,Villabona_D,451.94599999999997
+7,Alegia AM_O,Zizurkil AM_D,561.986
+8,Anoeta AM_O,Alegia AM_D,801.9390000000001
+9,Anoeta AM_O,Anoeta AM_D,2139.871
+10,Anoeta AM_O,Berastegi AM_D,3372.4939999999997
+11,Anoeta AM_O,Ibarra_D,3296.974
+12,Anoeta AM_O,Legorreta AM_D,1041.8200000000002
+13,Anoeta AM_O,Tolosa_D,13930.232
+14,Anoeta AM_O,Villabona_D,4196.179
+15,Anoeta AM_O,Zizurkil AM_D,3901.258
+16,Berastegi AM_O,Alegia AM_D,2933.355
+17,Berastegi AM_O,Anoeta AM_D,3188.623
+18,Berastegi AM_O,Berastegi AM_D,5135.6140000000005
+19,Berastegi AM_O,Ibarra_D,7374.701999999999
+20,Berastegi AM_O,Legorreta AM_D,3746.603
+21,Berastegi AM_O,Tolosa_D,30776.831
+22,Berastegi AM_O,Villabona_D,1441.573
+23,Berastegi AM_O,Zizurkil AM_D,1158.999
+24,Ibarra_O,Alegia AM_D,1376.519
+25,Ibarra_O,Anoeta AM_D,3241.9570000000003
+26,Ibarra_O,Berastegi AM_D,7641.171
+27,Ibarra_O,Ibarra_D,1361.054
+28,Ibarra_O,Legorreta AM_D,1618.7710000000002
+29,Ibarra_O,Tolosa_D,21686.137
+30,Ibarra_O,Villabona_D,1481.44
+31,Ibarra_O,Zizurkil AM_D,1221.375
+32,Legorreta AM_O,Alegia AM_D,8200.43
+33,Legorreta AM_O,Anoeta AM_D,984.809
+34,Legorreta AM_O,Berastegi AM_D,3694.068
+35,Legorreta AM_O,Ibarra_D,1752.2269999999999
+36,Legorreta AM_O,Legorreta AM_D,3936.833
+37,Legorreta AM_O,Tolosa_D,5938.939
+38,Legorreta AM_O,Villabona_D,645.519
+39,Legorreta AM_O,Zizurkil AM_D,710.094
+40,Tolosa_O,Alegia AM_D,6846.349
+41,Tolosa_O,Anoeta AM_D,14302.21
+42,Tolosa_O,Berastegi AM_D,31144.123
+43,Tolosa_O,Ibarra_D,20690.052
+44,Tolosa_O,Legorreta AM_D,6125.378
+45,Tolosa_O,Tolosa_D,77713.88799999999
+46,Tolosa_O,Villabona_D,5242.733
+47,Tolosa_O,Zizurkil AM_D,4968.436
+48,Villabona_O,Alegia AM_D,462.749
+49,Villabona_O,Anoeta AM_D,4073.673
+50,Villabona_O,Berastegi AM_D,1378.307
+51,Villabona_O,Ibarra_D,1476.464
+52,Villabona_O,Legorreta AM_D,646.856
+53,Villabona_O,Tolosa_D,5183.598
+54,Villabona_O,Villabona_D,2243.893
+55,Villabona_O,Zizurkil AM_D,4024.6259999999997
+56,Zizurkil AM_O,Alegia AM_D,442.856
+57,Zizurkil AM_O,Anoeta AM_D,4007.964
+58,Zizurkil AM_O,Berastegi AM_D,1182.503
+59,Zizurkil AM_O,Ibarra_D,1216.1480000000001
+60,Zizurkil AM_O,Legorreta AM_D,745.296
+61,Zizurkil AM_O,Tolosa_D,4963.785
+62,Zizurkil AM_O,Villabona_D,4008.118
+63,Zizurkil AM_O,Zizurkil AM_D,4274.774

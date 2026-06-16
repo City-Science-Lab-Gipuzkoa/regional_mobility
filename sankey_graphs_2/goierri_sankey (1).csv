@@ -1,0 +1,50 @@
+,name_origen,name_destino,viajes
+0,Beasain_O,Beasain_D,40613.475000000006
+1,Beasain_O,Idiazabal AM_D,31943.934
+2,Beasain_O,Lazkao_D,31755.813
+3,Beasain_O,Legazpi_D,2252.145
+4,Beasain_O,Ordizia_D,44373.026
+5,Beasain_O,Zegama AM_D,16166.863000000001
+6,Beasain_O,Zumarraga_D,6608.118
+7,Idiazabal AM_O,Beasain_D,25120.67
+8,Idiazabal AM_O,Idiazabal AM_D,6877.809
+9,Idiazabal AM_O,Lazkao_D,9098.413
+10,Idiazabal AM_O,Legazpi_D,1563.076
+11,Idiazabal AM_O,Ordizia_D,6094.900000000001
+12,Idiazabal AM_O,Zegama AM_D,5102.368
+13,Idiazabal AM_O,Zumarraga_D,1171.319
+14,Lazkao_O,Beasain_D,29114.423
+15,Lazkao_O,Idiazabal AM_D,8417.315
+16,Lazkao_O,Lazkao_D,5229.618
+17,Lazkao_O,Legazpi_D,527.476
+18,Lazkao_O,Ordizia_D,3517.422
+19,Lazkao_O,Zegama AM_D,2244.876
+20,Lazkao_O,Zumarraga_D,4060.091
+21,Legazpi_O,Beasain_D,3064.551
+22,Legazpi_O,Idiazabal AM_D,1472.356
+23,Legazpi_O,Lazkao_D,1822.707
+24,Legazpi_O,Legazpi_D,13160.32
+25,Legazpi_O,Ordizia_D,1137.1299999999999
+26,Legazpi_O,Zegama AM_D,4269.644
+27,Legazpi_O,Zumarraga_D,14039.711
+28,Ordizia_O,Beasain_D,38878.496
+29,Ordizia_O,Idiazabal AM_D,5842.701
+30,Ordizia_O,Lazkao_D,3162.7389999999996
+31,Ordizia_O,Legazpi_D,2256.23
+32,Ordizia_O,Ordizia_D,5779.127
+33,Ordizia_O,Zegama AM_D,4243.868
+34,Ordizia_O,Zumarraga_D,1670.295
+35,Zegama AM_O,Beasain_D,14407.29
+36,Zegama AM_O,Idiazabal AM_D,6746.576
+37,Zegama AM_O,Lazkao_D,3970.249
+38,Zegama AM_O,Legazpi_D,5000.443
+39,Zegama AM_O,Ordizia_D,4006.4759999999997
+40,Zegama AM_O,Zegama AM_D,7630.537
+41,Zegama AM_O,Zumarraga_D,5016.713
+42,Zumarraga_O,Beasain_D,6939.407
+43,Zumarraga_O,Idiazabal AM_D,1443.239
+44,Zumarraga_O,Lazkao_D,1728.734
+45,Zumarraga_O,Legazpi_D,15174.13
+46,Zumarraga_O,Ordizia_D,2105.851
+47,Zumarraga_O,Zegama AM_D,7257.9259999999995
+48,Zumarraga_O,Zumarraga_D,25681.328

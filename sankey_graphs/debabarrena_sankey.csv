@@ -1,0 +1,17 @@
+,name_origen,name_destino,viajes
+0,Deba_O,Deba_D,40523.282
+1,Deba_O,Eibar_D,16736.627
+2,Deba_O,Elgoibar_D,21695.157
+3,Deba_O,Mutriku AM_D,26161.968
+4,Eibar_O,Deba_D,15985.676
+5,Eibar_O,Eibar_D,1062581.751
+6,Eibar_O,Elgoibar_D,114473.50899999999
+7,Eibar_O,Mutriku AM_D,26530.992000000002
+8,Elgoibar_O,Deba_D,21367.54
+9,Elgoibar_O,Eibar_D,115132.383
+10,Elgoibar_O,Elgoibar_D,399919.325
+11,Elgoibar_O,Mutriku AM_D,44626.792
+12,Mutriku AM_O,Deba_D,25834.014
+13,Mutriku AM_O,Eibar_D,27215.777000000002
+14,Mutriku AM_O,Elgoibar_D,43976.849
+15,Mutriku AM_O,Mutriku AM_D,32662.087

@@ -16,25 +16,25 @@ import io
 import base64
 
 comarcas_dict = {
-    "ALTO_DEBA": pd.read_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_pueblos/ALTO_DEBA.csv'),
-    "BAJO_DEBA": pd.read_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_pueblos/BAJO_DEBA.csv'),
-    "BAJO_BIDASOA": pd.read_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_pueblos/BAJO_BIDASOA.csv'),
-    "DONOSTIALDEA": pd.read_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_pueblos/DONOSTIALDEA.csv'),
-    "GOIERRI": pd.read_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_pueblos/GOIERRI.csv'),
-    "TOLOSALDEA": pd.read_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_pueblos/TOLOSALDEA.csv'),
-    "UROLA KOSTA": pd.read_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_pueblos/UROLA_KOSTA.csv'),
+    "ALTO_DEBA": pd.read_csv(f'input_data/comarcas_pueblos/ALTO_DEBA.csv'),
+    "BAJO_DEBA": pd.read_csv(f'input_data/comarcas_pueblos/BAJO_DEBA.csv'),
+    "BAJO_BIDASOA": pd.read_csv(f'input_data/comarcas_pueblos/BAJO_BIDASOA.csv'),
+    "DONOSTIALDEA": pd.read_csv(f'input_data/comarcas_pueblos/DONOSTIALDEA.csv'),
+    "GOIERRI": pd.read_csv(f'input_data/comarcas_pueblos/GOIERRI.csv'),
+    "TOLOSALDEA": pd.read_csv(f'input_data/comarcas_pueblos/TOLOSALDEA.csv'),
+    "UROLA KOSTA": pd.read_csv(f'input_data/comarcas_pueblos/UROLA_KOSTA.csv'),
 }
 
-roads_gdf = gpd.read_file('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/ERREPIDEAK_CARRETERAS/ERREPIDEAK_CARRETERAS.shp')
+roads_gdf = gpd.read_file(f'input_data/ERREPIDEAK_CARRETERAS/ERREPIDEAK_CARRETERAS.shp')
 roads_gdf = roads_gdf.to_crs(epsg=4326)
 roads_geojson = json.loads(roads_gdf.to_json())
 for feature in roads_geojson["features"]:
     feature["properties"]["color"] = "rgb(255,0,0,1)"
 
-with open('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/roads.json', "w") as json_file:
+with open(f'input_data/roads.json', "w") as json_file:
     json.dump(roads_geojson, json_file, indent=4)
 
-gdf = gpd.read_file('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/comarcas_gipuzkoa_monoparte/comarcas_gipuzkoa_monoparte.shp')
+gdf = gpd.read_file(f'input_data/comarcas_gipuzkoa_monoparte/comarcas_gipuzkoa_monoparte.shp')
 # Esto le asigna al shapefile, en el apartado "sankey", el archivo csv correspondiente. De esta forma, al hacer click en una comarca, se cargará el archivo csv correspondiente.
 comarc_to_csv = {
     "TOLOSALDEA": "tolosaldea_sankey.csv",
@@ -45,12 +45,12 @@ comarc_to_csv = {
     "GOIERRI": "goierri_sankey.csv",
     "BAJO BIDASOA": "bidasoa_sankey.csv",
 }
-gdf["sankey"] = gdf["COMARCA"].map(comarc_to_csv).fillna("C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs/comarcas_sankey.csv")
+gdf["sankey"] = gdf["COMARCA"].map(comarc_to_csv).fillna(f"input_data/sankey_graphs/comarcas_sankey.csv")
 gdf = gdf.to_crs(epsg=4326)
 geojson_data = json.loads(gdf.to_json())
 
 # default_sankey_file = "C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs/comarcas_sankey.csv"
-data_global = pd.read_csv("C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/data_global.csv")
+data_global = pd.read_csv(f"input_data/data_global.csv")
 
 radar_data = [4.99, 5.99, 5.98, 7.95, 6.68, 8.69, 7.68]
 
@@ -869,7 +869,7 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     unique_comarcas = comarcas_sankey['COMARCA_origen'].unique()
     comarcas_sankey['COMARCA_origen'] = comarcas_sankey['COMARCA_origen'] + "_O"
     comarcas_sankey['COMARCA_destino'] = comarcas_sankey['COMARCA_destino'] + "_D"
-    comarcas_sankey.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/comarcas_sankey.csv')
+    comarcas_sankey.to_csv(f'output_data/sankey_graphs_2/comarcas_sankey.csv')
 
     comarca_datasets = {}
     for comarca in unique_comarcas:
@@ -879,43 +879,43 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     tolosaldea_dataset['name_origen'] = tolosaldea_dataset['name_origen'] + "_O"
     tolosaldea_dataset['name_destino'] = tolosaldea_dataset['name_destino'] + "_D"
     tolosaldea_dataset = tolosaldea_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    tolosaldea_dataset.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/tolosaldea_sankey.csv')
+    tolosaldea_dataset.to_csv(f'output_datasankey_graphs_2/tolosaldea_sankey.csv')
 
     bidasoa_dataset = comarca_datasets['BAJO_BIDASOA']
     bidasoa_dataset['name_origen'] = bidasoa_dataset['name_origen'] + "_O"
     bidasoa_dataset['name_destino'] = bidasoa_dataset['name_destino'] + "_D"
     bidasoa_dataset = bidasoa_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum', 'car': 'sum', 'transit': 'sum', 'walk': 'sum'})
-    bidasoa_dataset.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/bidasoa_sankey.csv')
+    bidasoa_dataset.to_csv(f'output_data/sankey_graphs_2/bidasoa_sankey.csv')
 
     urola_dataset = comarca_datasets['UROLA_KOSTA']
     urola_dataset['name_origen'] = urola_dataset['name_origen'] + "_O"
     urola_dataset['name_destino'] = urola_dataset['name_destino'] + "_D"
     urola_dataset = urola_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    urola_dataset.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/urola_kosta_sankey.csv')
+    urola_dataset.to_csv(f'output_data/sankey_graphs_2/urola_kosta_sankey.csv')
 
     debagoiena_dataset = comarca_datasets['ALTO_DEBA']
     debagoiena_dataset['name_origen'] = debagoiena_dataset['name_origen'] + "_O"
     debagoiena_dataset['name_destino'] = debagoiena_dataset['name_destino'] + "_D"
     debagoiena_dataset = debagoiena_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    debagoiena_dataset.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/debagoiena_sankey.csv')
+    debagoiena_dataset.to_csv(f'output_data/sankey_graphs_2/debagoiena_sankey.csv')
 
     goierri_dataset = comarca_datasets['GOIERRI']
     goierri_dataset['name_origen'] = goierri_dataset['name_origen'] + "_O"
     goierri_dataset['name_destino'] = goierri_dataset['name_destino'] + "_D"
     goierri_dataset = goierri_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    goierri_dataset.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/goierri_sankey.csv')
+    goierri_dataset.to_csv(f'output_data/sankey_graphs_2/goierri_sankey.csv')
 
     donostialdea_dataset = comarca_datasets['DONOSTIALDEA']
     donostialdea_dataset['name_origen'] = donostialdea_dataset['name_origen'] + "_O"
     donostialdea_dataset['name_destino'] = donostialdea_dataset['name_destino'] + "_D"
     donostialdea_dataset = donostialdea_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    donostialdea_dataset.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/donostialdea_sankey.csv')
+    donostialdea_dataset.to_csv(f'output_data/sankey_graphs_2/donostialdea_sankey.csv')
 
     debabarrena_dataset = comarca_datasets['BAJO_DEBA']
     debabarrena_dataset['name_origen'] = debabarrena_dataset['name_origen'] + "_O"
     debabarrena_dataset['name_destino'] = debabarrena_dataset['name_destino'] + "_D"
     debabarrena_dataset = debabarrena_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    debabarrena_dataset.to_csv('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/debabarrena_sankey.csv')
+    debabarrena_dataset.to_csv(f'output_data/sankey_graphs_2/debabarrena_sankey.csv')
 
     # print(df.head())
 
@@ -926,14 +926,14 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     # # If the reset button is clicked, reset to default Sankey
     # if triggered_id == "reset-button":
     #     return [
-    #         generate_sankey_chart("C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+    #         generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
     #         df_json
     #     ]
 
     # # If a dropdown is changed, keep the current figure (do NOT use click_data)
     # if triggered_id in ["dropdown-simbiosis", "dropdown-carpool", "dropdown-ev", "dropdown-30", "dropdown-ond"]:
     #     return [
-    #         current_fig if current_fig else generate_sankey_chart("C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+    #         current_fig if current_fig else generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
     #         df_json
     #     ]
 
@@ -944,14 +944,14 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     #     region_name = feature.get("COMARC_EUS", "Unknown Region")  # Get the region name from properties
 
     #     if sankey_file:
-    #         sankey_path = f"C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/{sankey_file}"
+    #         sankey_path = f"output_data/sankey_graphs_2/{sankey_file}"
     #         return [
     #             generate_sankey_chart(sankey_path, f"Trips in {region_name}"),
     #             df_json
     #         ]  # Update the title with region name  
 
     # return [
-    #     current_fig if current_fig else generate_sankey_chart("C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+    #     current_fig if current_fig else generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
     #     df_json
     # ]
 
@@ -961,7 +961,7 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     # If button is clicked, reset to default Sankey
     if ctx.triggered and ctx.triggered[0]['prop_id'] == 'reset-button.n_clicks':
         return [
-            generate_sankey_chart("C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+            generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
             df_json
         ]
 
@@ -973,14 +973,14 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
         
         if sankey_file:
             # print(sankey_file)
-            sankey_path = f"C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/{sankey_file}"
+            sankey_path = f"output_data/sankey_graphs_2/{sankey_file}"
             return [
                 generate_sankey_chart(sankey_path, f"Trips in {region_name}"),
                 df_json
             ]  # Update the title with region name  
     
     return [
-        current_fig if current_fig else generate_sankey_chart("C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"), 
+        current_fig if current_fig else generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"), 
         df_json
     ]
 
@@ -1153,7 +1153,7 @@ def update_roads(drop_simbiosis, drop_carpool, drop_life, drop_ondemand):
         #     feature["properties"]["color"] = "rgb(255,255,0,1)"
         [feature["properties"].update({"color": "rgb(255,255,0,1)"}) for feature in updated_roads["features"]]
 
-        with open('C:/Users/iazcarateu/Desktop/CSL@Gipuzkoa/regional_mobility/roads_2.json', "w") as json_file:
+        with open(f'input_data/roads_2.json', "w") as json_file:
             json.dump(updated_roads, json_file, indent=4)
         return [updated_roads]
 

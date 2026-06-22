@@ -7,7 +7,7 @@ An interactive dashboard for exploring mobility scenarios in Gipuzkoa. The appli
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/City-Science-Lab-Gipuzkoa/regional_mobility.git
 cd <repository-folder>
 ```
 
@@ -22,4 +22,6 @@ pip install -r requirements.txt
 ```bash
 python app_distributed.py
 ```
+
+A mapbox API key is required to execute the adequate visualization.
 

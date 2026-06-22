@@ -869,7 +869,7 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     unique_comarcas = comarcas_sankey['COMARCA_origen'].unique()
     comarcas_sankey['COMARCA_origen'] = comarcas_sankey['COMARCA_origen'] + "_O"
     comarcas_sankey['COMARCA_destino'] = comarcas_sankey['COMARCA_destino'] + "_D"
-    comarcas_sankey.to_csv(f'output_data/sankey_graphs_2/comarcas_sankey.csv')
+    comarcas_sankey.to_csv(f'output_data/comarcas_sankey.csv')
 
     comarca_datasets = {}
     for comarca in unique_comarcas:
@@ -879,43 +879,43 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     tolosaldea_dataset['name_origen'] = tolosaldea_dataset['name_origen'] + "_O"
     tolosaldea_dataset['name_destino'] = tolosaldea_dataset['name_destino'] + "_D"
     tolosaldea_dataset = tolosaldea_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    tolosaldea_dataset.to_csv(f'output_datasankey_graphs_2/tolosaldea_sankey.csv')
+    tolosaldea_dataset.to_csv(f'output_data/tolosaldea_sankey.csv')
 
     bidasoa_dataset = comarca_datasets['BAJO_BIDASOA']
     bidasoa_dataset['name_origen'] = bidasoa_dataset['name_origen'] + "_O"
     bidasoa_dataset['name_destino'] = bidasoa_dataset['name_destino'] + "_D"
     bidasoa_dataset = bidasoa_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum', 'car': 'sum', 'transit': 'sum', 'walk': 'sum'})
-    bidasoa_dataset.to_csv(f'output_data/sankey_graphs_2/bidasoa_sankey.csv')
+    bidasoa_dataset.to_csv(f'output_data/bidasoa_sankey.csv')
 
     urola_dataset = comarca_datasets['UROLA_KOSTA']
     urola_dataset['name_origen'] = urola_dataset['name_origen'] + "_O"
     urola_dataset['name_destino'] = urola_dataset['name_destino'] + "_D"
     urola_dataset = urola_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    urola_dataset.to_csv(f'output_data/sankey_graphs_2/urola_kosta_sankey.csv')
+    urola_dataset.to_csv(f'output_data/urola_kosta_sankey.csv')
 
     debagoiena_dataset = comarca_datasets['ALTO_DEBA']
     debagoiena_dataset['name_origen'] = debagoiena_dataset['name_origen'] + "_O"
     debagoiena_dataset['name_destino'] = debagoiena_dataset['name_destino'] + "_D"
     debagoiena_dataset = debagoiena_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    debagoiena_dataset.to_csv(f'output_data/sankey_graphs_2/debagoiena_sankey.csv')
+    debagoiena_dataset.to_csv(f'output_data/debagoiena_sankey.csv')
 
     goierri_dataset = comarca_datasets['GOIERRI']
     goierri_dataset['name_origen'] = goierri_dataset['name_origen'] + "_O"
     goierri_dataset['name_destino'] = goierri_dataset['name_destino'] + "_D"
     goierri_dataset = goierri_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    goierri_dataset.to_csv(f'output_data/sankey_graphs_2/goierri_sankey.csv')
+    goierri_dataset.to_csv(f'output_data/goierri_sankey.csv')
 
     donostialdea_dataset = comarca_datasets['DONOSTIALDEA']
     donostialdea_dataset['name_origen'] = donostialdea_dataset['name_origen'] + "_O"
     donostialdea_dataset['name_destino'] = donostialdea_dataset['name_destino'] + "_D"
     donostialdea_dataset = donostialdea_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    donostialdea_dataset.to_csv(f'output_data/sankey_graphs_2/donostialdea_sankey.csv')
+    donostialdea_dataset.to_csv(f'output_data/donostialdea_sankey.csv')
 
     debabarrena_dataset = comarca_datasets['BAJO_DEBA']
     debabarrena_dataset['name_origen'] = debabarrena_dataset['name_origen'] + "_O"
     debabarrena_dataset['name_destino'] = debabarrena_dataset['name_destino'] + "_D"
     debabarrena_dataset = debabarrena_dataset.groupby(['name_origen', 'name_destino'], as_index=False).agg({'viajes': 'sum'})
-    debabarrena_dataset.to_csv(f'output_data/sankey_graphs_2/debabarrena_sankey.csv')
+    debabarrena_dataset.to_csv(f'output_data/debabarrena_sankey.csv')
 
     # print(df.head())
 
@@ -926,14 +926,14 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     # # If the reset button is clicked, reset to default Sankey
     # if triggered_id == "reset-button":
     #     return [
-    #         generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+    #         generate_sankey_chart(f"output_data/comarcas_sankey.csv", "Trips in GIPUZKOA"),
     #         df_json
     #     ]
 
     # # If a dropdown is changed, keep the current figure (do NOT use click_data)
     # if triggered_id in ["dropdown-simbiosis", "dropdown-carpool", "dropdown-ev", "dropdown-30", "dropdown-ond"]:
     #     return [
-    #         current_fig if current_fig else generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+    #         current_fig if current_fig else generate_sankey_chart(f"output_data/comarcas_sankey.csv", "Trips in GIPUZKOA"),
     #         df_json
     #     ]
 
@@ -944,14 +944,14 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     #     region_name = feature.get("COMARC_EUS", "Unknown Region")  # Get the region name from properties
 
     #     if sankey_file:
-    #         sankey_path = f"output_data/sankey_graphs_2/{sankey_file}"
+    #         sankey_path = f"output_data/{sankey_file}"
     #         return [
     #             generate_sankey_chart(sankey_path, f"Trips in {region_name}"),
     #             df_json
     #         ]  # Update the title with region name  
 
     # return [
-    #     current_fig if current_fig else generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+    #     current_fig if current_fig else generate_sankey_chart(f"output_data/comarcas_sankey.csv", "Trips in GIPUZKOA"),
     #     df_json
     # ]
 
@@ -961,7 +961,7 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
     # If button is clicked, reset to default Sankey
     if ctx.triggered and ctx.triggered[0]['prop_id'] == 'reset-button.n_clicks':
         return [
-            generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"),
+            generate_sankey_chart(f"output_data/comarcas_sankey.csv", "Trips in GIPUZKOA"),
             df_json
         ]
 
@@ -973,14 +973,14 @@ def update_sankey(click_data, n_clicks, current_fig, drop_simbiosis, drop_carpoo
         
         if sankey_file:
             # print(sankey_file)
-            sankey_path = f"output_data/sankey_graphs_2/{sankey_file}"
+            sankey_path = f"output_data/{sankey_file}"
             return [
                 generate_sankey_chart(sankey_path, f"Trips in {region_name}"),
                 df_json
             ]  # Update the title with region name  
     
     return [
-        current_fig if current_fig else generate_sankey_chart(f"output_data/sankey_graphs_2/comarcas_sankey.csv", "Trips in GIPUZKOA"), 
+        current_fig if current_fig else generate_sankey_chart(f"output_data/comarcas_sankey.csv", "Trips in GIPUZKOA"), 
         df_json
     ]
 
